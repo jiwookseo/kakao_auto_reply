@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta property="og:title" content="2018 하계수련회" /> 
+	<meta property="og:description" content="모바일 바코드 등록" /> 
+  <title>2018 하계수련회</title>
+  <meta http-equiv="content-type" content="text/heml; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+	body {
+		background-color: #eee;
+	}
+  </style>
+  
+  <script>
+
+  </script>
+  
+  
+</head>
+<body>
+<?php
+$user_key = $_GET["user_key"];
+?>
+<div class="container">
+  <h2>바코드 등록하기</h2>
+  <p></p>
+  <form method="post" action="register_action.php">
+  
+	<input type='hidden' value='<?php echo $user_key; ?>' name='user_key'>
+  
+    <div class="form-group">
+	  <label for="kyogu">교구:</label>
+	  
+	  <select class="form-control" id="kyogu" name="u_kyogu">
+		<option value="">선택하세요</option>
+		<option value="1">1교구</option>
+		<option value="2">2교구</option>
+		<option value="3">3교구</option>
+		<option value="4">새가족</option>
+	  </select>
+	</div>
+	
+    <div class="form-group">
+      <label for="team">팀:</label>
+	  
+	  <select class="form-control" id="team" name="u_team">
+		<option>선택하세요</option>
+		<?for($i=1;$i<=16;$i++)
+			echo '<option value="'.$i.'">'.$i."팀</option>";
+		?>
+		<!--<option value="14">새가족팀</option>-->
+	  </select>
+	 </div>
+
+    <div class="form-group">
+      <label for="group">그룹:</label>
+      <select class="form-control"  id="group" name="u_group">
+		<option>선택하세요</option>
+		<?for($i=1;$i<=5;$i++)
+			echo '<option value="'.$i.'">'.$i."그룹</option>";
+		?>
+	  </select> 
+	</div>
+	
+    <div class="form-group">
+      <label for="name">이름:</label>
+      <input type="text" class="form-control" id="name" name="u_name" charset="utf-8">
+    </div>
+	
+    <div class="form-group">
+      <label for="gisu">기수:</label>
+	  
+	  <select class="form-control" id="gisu" name="u_gisu">
+		<option>선택하세요</option>
+		<?for($i=28;$i<=40;$i++)
+			echo '<option value="'.$i.'">'.$i."기</option>";
+		?>
+	  </select> 
+	  
+      <!--<input type="text" class="form-control" id="gisu" name="u_gisu">-->
+    </div>
+	
+	 <div class="form-group">
+	  <label for="check">임원단 or 준비위원:</label>
+	  
+	  <select class="form-control" id="check" name="u_check">
+		<option value="">선택하세요</option>
+		<option value="1">임원단</option>
+		<option value="2">준비위원</option>
+	  </select>
+	</div>
+	
+    <!-- <div class="form-group">
+      <label for="phone">전화번호:</label>
+      <input type="text" class="form-control" id="phone" name="u_phone">
+    </div> -->
+	<button type="submit" class="btn btn-primary btn-block">제출하기</button>
+  </form>
+</div>
+
+</body>
+</html>
+

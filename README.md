@@ -47,7 +47,7 @@ php 언어를 이용해 웹서버 db를 연동한 동적 메세지를 보낼 수
 
 [카카오톡 chatbot test 시작하기](https://pf.kakao.com/_ERQCxl/chat)
 
-
+**현재 중단한 상태**
 
 ## V. 참고
 

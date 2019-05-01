@@ -53,4 +53,4 @@ php 언어를 이용해 웹서버 db를 연동한 동적 메세지를 보낼 수
 
 [플러스친구 자동응답 API 공식문서](https://github.com/plusfriend/auto_reply)
 
-[barcode bakery](https://www.barcodebakery.com/)
+[barcode bakery api](https://www.barcodebakery.com/en/resources/api/php/code128)
